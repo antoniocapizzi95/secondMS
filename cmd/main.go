@@ -48,6 +48,7 @@ func runKafka(address string, port string, topic string, partition int) {
 		}
 		//fmt.Printf("message at offset %d: %s = %s\n", m.Offset, string(m.Key), string(m.Value))
 		if string(m.Key) == "Person" {
+			fmt.Println("Adding person to database: " + string(m.Value))
 			reqhandlers.AddPerson(m.Value)
 		}
 	}

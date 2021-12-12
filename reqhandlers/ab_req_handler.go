@@ -20,4 +20,5 @@ func AddPerson(rawData []byte) {
 	if err != nil {
 		fmt.Println("Error saving person, error: " + err.Error())
 	}
+	fmt.Println("Person added correctly")
 }
